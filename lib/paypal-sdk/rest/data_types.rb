@@ -340,6 +340,7 @@ module PayPal::SDK
 
       class FundingInstrument < Base
         def self.load_members
+          object_of :billing, Billing
           object_of :credit_card, CreditCard
           object_of :credit_card_token, CreditCardToken
         end
