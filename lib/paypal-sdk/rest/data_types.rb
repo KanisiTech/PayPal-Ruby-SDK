@@ -176,11 +176,49 @@ module PayPal::SDK
         include RequestDataType
       end
 
-      class BillingAgreementToken < Base
+      class BillingAgreement < Base
         def self.load_members
+          object_of :create_time, String
+          object_of :description, String
+          object_of :id, String
+          object_of :payer, Payer
+          object_of :plan, Plan
+          object_of :state, String
+          object_of :token_id, String
+          object_of :update_time, String
+
+          array_of :links, Links
         end
 
         include RequestDataType
+
+        def create()
+          path = "v1/billing-agreements/agreements"
+          response = api.post(path, self.to_hash, http_header)
+          self.merge!(response)
+          success?
+        end
+      end
+
+      class BillingAgreementToken < Base
+        def self.load_members
+          object_of :description, String
+          object_of :payer, Payer
+          object_of :plan, Plan
+          object_of :shipping_address, ShippingAddress
+          object_of :token_id, String
+
+          array_of :links, Links
+        end
+
+        include RequestDataType
+
+        def create()
+          path = "v1/billing-agreements/agreement-tokens"
+          response = api.post(path, self.to_hash, http_header)
+          self.merge!(response)
+          success?
+        end
       end
 
       class CountryCode < Base
