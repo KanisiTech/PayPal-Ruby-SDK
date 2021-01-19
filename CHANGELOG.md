@@ -1,6 +1,10 @@
 PayPal Ruby SDK release notes
 =============================
 
+v1.7.5
+------
+  * Add support for Billing Agreement Tokens [#1](https://github.com/KanisiTech/PayPal-Ruby-SDK/pull/1).
+
 v1.7.4
 ------
   * Update Payouts API for latest schema [#388](https://github.com/paypal/PayPal-Ruby-SDK/pull/388).
