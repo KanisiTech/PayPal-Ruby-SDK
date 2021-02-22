@@ -315,7 +315,7 @@ module PayPal::SDK
         def self.load_members
           object_of :version, Integer
           object_of :billing_cycle_sequence, Integer
-          object_of :fixed_price, Currency
+          object_of :fixed_price, Money
         end
       end
 
