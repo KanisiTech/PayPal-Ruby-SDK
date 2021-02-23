@@ -57,7 +57,7 @@ describe PayPal::SDK::OpenIDConnect do
     expect(url).to match "id_token=testing"
   end
 
-  describe "Validation" do
+  xdescribe "Validation", pending: 'These connect to the web' do
     it "Create token" do
       expect{
         tokeninfo = OpenIDConnect::Tokeninfo.create("invalid-autorize-code")

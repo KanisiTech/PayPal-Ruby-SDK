@@ -34,4 +34,4 @@ RSpec.configure do |config|
   # config.include PayPal::SDK::REST::DataTypes
 end
 
-WebMock.allow_net_connect!
+WebMock.enable!

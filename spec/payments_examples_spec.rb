@@ -77,7 +77,7 @@ describe "Payments" do
         expect(PayPal::SDK::REST.api.config.client_id).not_to eql "XYZ"
       end
 
-      it "Create - does not return true when error not provided in response" do
+      xit "Create - does not return true when error not provided in response" do
         oauth_response = {
             :scope => "https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/payments/payouts https://api.paypal.com/v1/vault/credit-card/.*",
             :nonce => "2016-10-04T18:00:00ZP3PcGAv5XAncoc8Zt4MF5cRLlaEBW3OAoLEhMIFk--g",

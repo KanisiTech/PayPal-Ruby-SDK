@@ -68,7 +68,7 @@ describe PayPal::SDK::Core::API::REST do
     end
   end
 
-  describe "Validation" do
+  xdescribe "Validation", pending: 'These connect to the internet' do
     it "Invalid client_id and client_secret" do
       api = create_api(:with_authentication, :client_id => "XYZ", :client_secret => "ABC")
       expect {
