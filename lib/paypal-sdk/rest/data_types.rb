@@ -505,6 +505,7 @@ module PayPal::SDK
       class Revision < Base
         def self.load_members
           object_of :plan_id, String
+          object_of :plan, SubscriptionPlan
           object_of :shipping_amount, Currency
           object_of :shipping_address, ShippingAddress
           object_of :application_context, ApplicationContext
