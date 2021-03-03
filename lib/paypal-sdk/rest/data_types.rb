@@ -322,6 +322,7 @@ module PayPal::SDK
       class Subscription < Base
         def self.load_members
           object_of :id, String
+          object_of :custom_id, String
           object_of :plan_id, String
           object_of :start_time, String
           object_of :quantity, String
