@@ -328,7 +328,7 @@ module PayPal::SDK
           object_of :quantity, String
           object_of :shipping_amount, Currency
           object_of :subscriber, Subscriber
-          object_of :billing_info, BillingInfo
+          object_of :billing_info, SubscriptionBillingInfo
           object_of :plan, SubscriptionPlan
           object_of :application_context, ApplicationContext
           object_of :status_change_note, String
