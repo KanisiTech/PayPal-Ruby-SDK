@@ -376,6 +376,7 @@ module PayPal::SDK
         end
 
         def capture(subscription_capture)
+          capture = SubscriptionCapture.new(subscription_capture)
           path = "v1/billing/subscriptions/#{self.id}/capture"
           response = api.post(path, capture.to_hash, http_header)
           self.merge!(response)
@@ -493,7 +494,7 @@ module PayPal::SDK
         def self.load_members
           object_of :note, String
           object_of :capture_type, String
-          object_of :amount, Currency
+          object_of :amount, Money
         end
       end
 
